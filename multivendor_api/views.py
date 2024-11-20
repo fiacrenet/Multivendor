@@ -16,8 +16,8 @@ class VendorDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Vendor.objects.all()
     serializer_class = serializers.VendorDetailSerializer
 
-# Create Product Category.
-class ProductCategory(generics.ListCreateAPIView):
+# Create Product Category list.
+class ProductCategoryList(generics.ListCreateAPIView):
     queryset = models.ProductCategory.objects.all()
     serializer_class = serializers.ProductCategorySerializer
 
@@ -27,18 +27,17 @@ class ProductCategoryDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = serializers.ProductCategoryDetailSerializer
 
 # Create Product List
-class Product(generics.ListCreateAPIView):
+class ProductList(generics.ListCreateAPIView):
     queryset = models.Product.objects.all()
     serializer_class = serializers.ProductSerializer
-
-
+    
 # Product detail view
 class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Product.objects.all()
     serializer_class = serializers.ProductDetailSerializer
 
 # Create Customer List
-class Customer(generics.ListCreateAPIView):
+class CustomerList(generics.ListCreateAPIView):
     queryset = models.Customer.objects.all()
     serializer_class = serializers.CustomerSerializer
 
@@ -46,4 +45,27 @@ class Customer(generics.ListCreateAPIView):
 class CustomerDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Customer.objects.all()
     serializer_class = serializers.CustomerDetailSerializer
+
+# Create Order List
+class OrderList(generics.ListCreateAPIView):
+    queryset = models.Order.objects.all()
+    serializer_class = serializers.OrderSerializer
+
+# Order detail view
+class OrderDetail(generics.ListAPIView):
+    # queryset = models.OrderItems.objects.all()
+    serializer_class = serializers.OrderDetailSerializer
+
+    def get_queryset(self):
+        order_id = self.kwargs['pk']
+        order = models.Order.objects.get(id=order_id)
+        order_items = models.OrderItems.objects.filter(order=order)
+        return order_items
+
+   
+
+# Create OrderItem List
+class OrderItemsList(generics.ListCreateAPIView):
+    queryset = models.OrderItems.objects.all()
+    serializer_class = models.OrderItems.objects.all()
     
