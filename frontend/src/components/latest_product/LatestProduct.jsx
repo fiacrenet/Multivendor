@@ -126,7 +126,8 @@ function LatestProduct() {
                     </div>
                 </div>  
                 {/* Product Box End */}
-            </div>     
+            </div>    
+            <hr /> 
         </div>
     </div>
       
