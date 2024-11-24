@@ -27,17 +27,9 @@ class ProductCategorySerializer(serializers.ModelSerializer):
         fields = ['id','title', 'detail', 'dateadd']
 
     def __init__(self, *args, **kwargs):
-        super(ProductCategoryDetailSerializer, self).__init__(*args, **kwargs)
+        super(ProductCategorySerializer, self).__init__(*args, **kwargs)
         self.Meta.depth = 1
 
-class ProductCategoryDetailSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = models.ProductCategory
-        fields = ['id','title', 'detail', 'dateadd']
-
-    def __init__(self, *args, **kwargs):
-        super(ProductCategoryDetailSerializer, self).__init__(*args, **kwargs)
-        self.Meta.depth = 1
 
 
 class ProductSerializer(serializers.ModelSerializer):

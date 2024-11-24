@@ -17,14 +17,9 @@ class VendorDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = serializers.VendorDetailSerializer
 
 # Create Product Category list.
-class ProductCategoryList(generics.ListCreateAPIView):
+class ProductCategoryViewSet(viewsets.ModelViewSet):
     queryset = models.ProductCategory.objects.all()
     serializer_class = serializers.ProductCategorySerializer
-
-# Product category detail view
-class ProductCategoryDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = models.ProductCategory.objects.all()
-    serializer_class = serializers.ProductCategoryDetailSerializer
 
 # Create Product List
 class ProductList(generics.ListCreateAPIView):
@@ -68,14 +63,13 @@ class OrderDetail(generics.ListAPIView):
 # Create OrderItem List
 class OrderItemsList(generics.ListCreateAPIView):
     queryset = models.OrderItems.objects.all()
-    serializer_class = models.OrderItems.objects.all()
+    serializer_class = serializers.OrderItemsSerializer
 
 # Create Customer Addresses View
 class CustomerAddressViewSet(viewsets.ModelViewSet):
-    serializer_class = serializers.CustomerAddressSerializer
     queryset = models.CustomerAddress.objects.all()
+    serializer_class = serializers.CustomerAddressSerializer
 
 class ProductRatingViewSet(viewsets.ModelViewSet):
-    serializer_class = serializers.ProductRatingSerialiser
     queryset = models.ProductRating.objects.all()
-    
+    serializer_class = serializers.ProductRatingSerialiser

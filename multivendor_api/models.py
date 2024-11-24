@@ -20,7 +20,7 @@ class ProductCategory(models.Model):
         return self.title
     
     
-# Products Categroy Models
+# Products Models
 class Product(models.Model):
     title = models.CharField(max_length=200)
     detail = models.TextField()
