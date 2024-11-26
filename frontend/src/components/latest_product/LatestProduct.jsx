@@ -4,7 +4,7 @@ function LatestProduct() {
   return (
     <div className="latesproduct mt-4">
         <div className="container">
-            <h3 className='mb-4'>Latest Products <a href='#' className='float-end btn  btn-dark mt-2'>View All Products <i class="fa-solid fa-arrow-right"></i></a></h3>
+            <h3 className='mb-4'>Latest Products <a href='#' className='float-end btn  btn-dark mt-2'>View All Products <i className="fa-solid fa-arrow-right"></i></a></h3>
             <div className="row">
                 {/* Product Box */}
                 <div className="col-12 col-md-3 mb-4">
