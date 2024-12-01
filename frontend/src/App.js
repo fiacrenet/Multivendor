@@ -13,6 +13,10 @@ import ProductDetails from "./components/product/ProductDetails";
 import Checkout from "./components/checkout/Checkout";
 import CustomerRegister from "./components/customer/CustomerRegister";
 import CustomerLogin from "./components/customer/CustomerLogin";
+import CustomerDashboard from "./components/customer/CustomerDashboard";
+import Order from "./components/order/Order";
+import OrderSuccess from "./components/order/OrderSuccess";
+import OrderFailure from "./components/order/OrderFailure";
 
 const App = () => {
   return (
@@ -33,6 +37,10 @@ const App = () => {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/customer-register" element={<CustomerRegister />} />
         <Route path="/customer-login" element={<CustomerLogin />} />
+        <Route path="/customer-dashboard" element={<CustomerDashboard />} />
+        <Route path="/order" element={<Order />} />
+        <Route path="/order-success" element={<OrderSuccess />} />
+        <Route path="/order-failure" element={<OrderFailure />} />
       </Routes>
       <Footer />
     </div>
