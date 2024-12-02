@@ -15,21 +15,33 @@ function Sidebar() {
         <Link to="/order" className="list-group-item list-group-item-action">
           Orders
         </Link>
-        <a href="#" className="list-group-item list-group-item-action">
-          Whishlist
-        </a>
-        <a href="#" className="list-group-item list-group-item-action">
+        <Link to="/wishlist" className="list-group-item list-group-item-action">
+          Wishlist
+        </Link>
+        <Link
+          to="/customer-profil"
+          className="list-group-item list-group-item-action"
+        >
           Profil
-        </a>
-        <a href="#" className="list-group-item list-group-item-action">
+        </Link>
+        <Link
+          to="/customer-pwd"
+          className="list-group-item list-group-item-action"
+        >
+          Change Password
+        </Link>
+        <Link
+          to="/customer-pwd"
+          className="list-group-item list-group-item-action"
+        >
           Addresses
-        </a>
-        <a
-          href="#"
+        </Link>
+        <Link
+          to="#"
           className="list-group-item list-group-item-action text-danger"
         >
           Logout
-        </a>
+        </Link>
       </div>
     </div>
   );

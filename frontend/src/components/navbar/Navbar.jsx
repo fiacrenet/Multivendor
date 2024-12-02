@@ -66,7 +66,7 @@ function Navbar() {
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <Link to="customer-dashbord" className="dropdown-item">
+                  <Link to="customer-dashboard" className="dropdown-item">
                     Dashboard
                   </Link>
                 </li>

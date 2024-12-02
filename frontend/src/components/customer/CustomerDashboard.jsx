@@ -16,7 +16,7 @@ function CustomerDashboard() {
                 <div className="card-body bg-success text-white text-center">
                   <h4>Total Orders</h4>
                   <h4>
-                    <Link to="/order"> 123 </Link>
+                    <p> 123 </p>
                   </h4>
                 </div>
               </div>

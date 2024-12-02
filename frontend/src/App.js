@@ -17,6 +17,9 @@ import CustomerDashboard from "./components/customer/CustomerDashboard";
 import Order from "./components/order/Order";
 import OrderSuccess from "./components/order/OrderSuccess";
 import OrderFailure from "./components/order/OrderFailure";
+import Wishlist from "./components/customer/Wishlist";
+import Profil from "./components/customer/Profil";
+import CustomerPwd from "./components/customer/CustomerPwd";
 
 const App = () => {
   return (
@@ -41,6 +44,9 @@ const App = () => {
         <Route path="/order" element={<Order />} />
         <Route path="/order-success" element={<OrderSuccess />} />
         <Route path="/order-failure" element={<OrderFailure />} />
+        <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/customer-profil" element={<Profil />} />
+        <Route path="/customer-pwd" element={<CustomerPwd />} />
       </Routes>
       <Footer />
     </div>
