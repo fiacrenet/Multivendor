@@ -77,9 +77,51 @@ function Navbar() {
                 </li>
               </ul>
             </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Seller Panel
+              </a>
+              <ul className="dropdown-menu">
+                <li>
+                  <Link to="customer-register" className="dropdown-item">
+                    {" "}
+                    Register
+                  </Link>
+                </li>
+                <li>
+                  <Link to="customer-login" className="dropdown-item">
+                    Login
+                  </Link>
+                </li>
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
+                <li>
+                  <Link to="customer-dashboard" className="dropdown-item">
+                    Dashboard
+                  </Link>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Logout
+                  </a>
+                </li>
+              </ul>
+            </li>
             <li className="nav-item">
               <Link className="nav-link" to="checkout">
-                My Cart ( 4 )
+                New Orders(4)
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="checkout">
+                My Cart (4)
               </Link>
             </li>
           </ul>

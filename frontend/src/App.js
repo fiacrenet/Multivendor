@@ -20,6 +20,7 @@ import OrderFailure from "./components/order/OrderFailure";
 import Wishlist from "./components/customer/Wishlist";
 import Profil from "./components/customer/Profil";
 import CustomerPwd from "./components/customer/CustomerPwd";
+import AddressList from "./components/customer/AddressList";
 
 const App = () => {
   return (
@@ -47,6 +48,7 @@ const App = () => {
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/customer-profil" element={<Profil />} />
         <Route path="/customer-pwd" element={<CustomerPwd />} />
+        <Route path="/customer-address" element={<AddressList />} />
       </Routes>
       <Footer />
     </div>

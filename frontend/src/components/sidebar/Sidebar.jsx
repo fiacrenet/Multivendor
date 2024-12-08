@@ -31,7 +31,7 @@ function Sidebar() {
           Change Password
         </Link>
         <Link
-          to="/customer-pwd"
+          to="/customer-address"
           className="list-group-item list-group-item-action"
         >
           Addresses
